@@ -1,11 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Description from './components/Description';
+import Message from './components/Message';
 
 function App() {
   return (
     <div className="App">
-      Olek
+      <Message message="Estamos trabajando" />
+      <Message message="en el" />
+      <Message message="bootcamp" />
+      <Description />
     </div>
   );
 }
