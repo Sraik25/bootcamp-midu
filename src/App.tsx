@@ -1,15 +1,31 @@
 import './App.css';
-import Description from './components/Description';
-import Message from './components/Message';
+import Header from './components/Header';
+import Content from './components/Content';
+import Total from './components/Total';
 
 function App() {
+  const course = 'Half Stack application development';
+  const parts = [
+    {
+      name: 'Fundamentals of React',
+      exercises: 10,
+    },
+    {
+      name: 'Using props to pass data',
+      exercises: 7,
+    },
+    {
+      name: 'State of a component',
+      exercises: 14,
+    },
+  ];
+
   return (
-    <div className="App">
-      <Message message="Estamos trabajando" />
-      <Message message="en el" />
-      <Message message="bootcamp" />
-      <Description />
-    </div>
+    <>
+      <Header title={course} />
+      <Content parts={parts} />
+      <Total parts={parts} />
+    </>
   );
 }
 
